@@ -1,2 +1,4 @@
 mnist/
 *.pyc
+env/
+*.swp
