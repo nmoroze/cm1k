@@ -4,16 +4,17 @@ import unittest
 
 class TestCM1K(unittest.TestCase):
     def test_category(self):
+        cm1k = cm1k.CM1K()
         random.random()
         category = random.randint(1, 0x7FFE)
 
-        cm1k.write_nsr(0x10)
-        cm1k.write_testcat(category)
+        cm1k.write(REG_NSR, 0x10)
+        cm1k.write(REG_CAT, category)
 
-        cm1k.write_resetchain()
+        cm1k.write(REG_RESETCHAIN)
         n_count = 0
         while True:
-            cat = cm1k.read_cat()
+            cat = cm1k.read(REG_CAT)
             if cat == 0xFFFF:
                 self.assertEqual(n_count, 1024)
                 break
