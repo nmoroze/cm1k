@@ -2,3 +2,5 @@ mnist/
 *.pyc
 env/
 *.swp
+.DS_Store
+models/

@@ -42,10 +42,13 @@ class CM1K(object):
         self.write(REG_INDEXCOMP, 0)
         return data
 
-    def train_vector(self, vector, category):
+    def broadcast_vector(self, vector):
         for byte in vector[:-1]: 
             self.write(REG_COMP, byte)  
         
         self.write(REG_LCOMP, vector[-1])
+
+    def train_vector(self, vector, category):
+        self.broadcast_vector(vector)
         self.write(REG_CAT, category)
         
