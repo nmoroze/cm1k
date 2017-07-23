@@ -2,13 +2,13 @@
 This repo contains the code and design files for the CM1K breakout board discussed in this [blog post](https://medium.com/@noahmoroze/experiments-with-the-cm1k-neural-net-chip-32b2d5ca723b).
 
 ## Hardware
-Under the `src/` directory I've included the original Altium files for the schematic and PCB. I designed two custom schematic/PCB library files (also included) for the crystal oscillator and the CM1K. I know Altium is fairly inaccessible, but I've had some trouble getting a good export that works in some sort of free and accessible PCB editor. Please contact me if youu have an editor that you'd like to work with these files in, and I'll work with you to make them accessible!
+Under the `src/` directory I've included the original Altium files for the schematic and PCB, as well the library files for the crystal oscillator and CM1K. I know Altium is fairly inaccessible, but I've had some trouble getting a good export that works in a free PCB editor. Please contact me if you would like to work with these files, and I'll help you make them accessible to your editor of choice!
 
 The `dist/` directory contains a PDF of the schematic as well as a zip file containing Gerber files for the PCB. This zip file is the exact same as the one I uploaded to Advanced Circuits to purchase this board. 
 
-I've included a BOM below, with part numbers included from Digikey where applicable. I originally purchased all components from Digikey, but unfortunately the CM1K no longer appears to be available from them. 
-
 ### BOM
+I originally purchased all components from Digikey, and generated the BOM below from that cart. However, the CM1K no longer appears to be available from Digikey. 
+
 | Part                               | Quantity | Digkey Part Number | Manufacturer Part Number |
 |------------------------------------|----------|--------------------|--------------------------|
 | IC REG LDO 1.2V 0.8A SOT223        | 1        | 497-4240-1-ND      | LD1117S12TR              |
